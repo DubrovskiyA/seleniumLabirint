@@ -49,7 +49,7 @@ public class LabirintPFTestSelenoid {
             put("enableVNC", true);
 
             /* How to enable video recording */
-            put("enableVideo", true);
+            put("enableVideo", false);
         }});
         driver = new RemoteWebDriver(new URL(hubURL+"/wd/hub"), options);
     }
