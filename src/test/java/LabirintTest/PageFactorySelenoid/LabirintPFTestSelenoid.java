@@ -24,6 +24,8 @@ public class LabirintPFTestSelenoid {
     private WebDriver driver;
     @BeforeEach
     public void setUp() throws MalformedURLException {
+        String hubURL=System.getProperty("hub","http://localhost:4444/wd/hub");
+        System.out.println("hubURL = " + hubURL);
 //        сгенерировано selenoid ui
         ChromeOptions options = new ChromeOptions();
         options.setCapability("browserVersion", "120.0");
@@ -49,7 +51,7 @@ public class LabirintPFTestSelenoid {
             /* How to enable video recording */
             put("enableVideo", true);
         }});
-        driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), options);
+        driver = new RemoteWebDriver(new URL(hubURL+"/wd/hub"), options);
     }
     @AfterEach
     public void tearsDown(){
