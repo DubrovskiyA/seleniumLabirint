@@ -26,6 +26,7 @@ public class LabirintPFTest {
             driver.quit();
         }
     }
+
     @Test
     public void testPOM(){
         MainPage mainPage= PageFactory.initElements(driver, MainPage.class);
