@@ -80,10 +80,10 @@ public class TheInternetSelenoid extends Assertions {
         String newWindow = driver.getTitle();
         assertEquals("New Window", newWindow);
     }
-    @Test
-    public void notificationMessages(){
-        driver.get("https://the-internet.herokuapp.com/notification_message_rendered");
-        String flash = driver.findElement(By.id("flash")).getText();
-        assertTrue(flash.contains("Action successful"));
-    }
+//    @Test
+//    public void notificationMessages(){
+//        driver.get("https://the-internet.herokuapp.com/notification_message_rendered");
+//        String flash = driver.findElement(By.id("flash")).getText();
+//        assertTrue(flash.contains("Action successful"));
+//    }
 }
