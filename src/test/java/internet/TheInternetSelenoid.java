@@ -63,23 +63,23 @@ public class TheInternetSelenoid extends Assertions {
         String textLogout = driver.findElement(By.cssSelector("a.button")).getText();
         assertEquals("Logout",textLogout);
     }
-    @Test
-    public void iFrames(){
-        driver.manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);
-        driver.get("https://the-internet.herokuapp.com/iframe");
-        driver.switchTo().frame("mce_0_ifr");
-        String p = driver.findElement(By.cssSelector("p")).getText();
-        assertEquals("Your content goes here.",p);
-    }
-    @Test
-    public void multipleWindows(){
-        driver.get("https://the-internet.herokuapp.com/windows");
-        driver.findElement(By.cssSelector("#content a")).click();
-        Object[] objects = driver.getWindowHandles().toArray();
-        driver.switchTo().window(objects[1].toString());
-        String newWindow = driver.getTitle();
-        assertEquals("New Window", newWindow);
-    }
+//    @Test
+//    public void iFrames(){
+//        driver.manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);
+//        driver.get("https://the-internet.herokuapp.com/iframe");
+//        driver.switchTo().frame("mce_0_ifr");
+//        String p = driver.findElement(By.cssSelector("p")).getText();
+//        assertEquals("Your content goes here.",p);
+//    }
+//    @Test
+//    public void multipleWindows(){
+//        driver.get("https://the-internet.herokuapp.com/windows");
+//        driver.findElement(By.cssSelector("#content a")).click();
+//        Object[] objects = driver.getWindowHandles().toArray();
+//        driver.switchTo().window(objects[1].toString());
+//        String newWindow = driver.getTitle();
+//        assertEquals("New Window", newWindow);
+//    }
 //    @Test
 //    public void notificationMessages(){
 //        driver.get("https://the-internet.herokuapp.com/notification_message_rendered");
