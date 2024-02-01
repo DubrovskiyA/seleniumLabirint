@@ -44,7 +44,7 @@ public class TheInternetSelenoid extends Assertions {
             /* How to enable video recording */
             put("enableVideo", false);
         }});
-        driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), options);
+        driver = new RemoteWebDriver(new URL("http://selenoid:4444/wd/hub"), options);
     }
     @AfterEach
     public void tearsDown(){
